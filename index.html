@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Micaila Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="startScreen" class="card">
+      <div class="badge">2 PLAYER QUIZ BATTLE</div>
+      <h1>MICAILA QUIZ</h1>
+      <p class="subtitle">Challenge your friend and see who knows more!</p>
+      <input id="player1Input" type="text" maxlength="20" placeholder="Player 1 name">
+      <input id="player2Input" type="text" maxlength="20" placeholder="Player 2 name">
+      <button id="startBtn">START GAME</button>
+      <p id="startError" class="error"></p>
+    </section>
+
+    <section id="gameScreen" class="card hidden">
+      <div class="topbar">
+        <span id="questionNumber">Question 1 / 10</span>
+        <span id="timer">10</span>
+      </div>
+      <div class="scores">
+        <div class="scoreBox"><strong id="p1Name">Player 1</strong><span id="p1Score">0</span></div>
+        <div class="scoreBox"><strong id="p2Name">Player 2</strong><span id="p2Score">0</span></div>
+      </div>
+      <div id="turnLabel" class="turn"></div>
+      <h2 id="question"></h2>
+      <div id="answers" class="answers"></div>
+      <p id="feedback" class="feedback"></p>
+    </section>
+
+    <section id="resultScreen" class="card hidden">
+      <div class="badge">FINAL RESULTS</div>
+      <h1 id="resultTitle"></h1>
+      <div class="finalScores">
+        <div><strong id="finalP1Name"></strong><span id="finalP1Score">0</span></div>
+        <div><strong id="finalP2Name"></strong><span id="finalP2Score">0</span></div>
+      </div>
+      <button id="againBtn">PLAY AGAIN</button>
+      <button id="menuBtn" class="secondary">MAIN MENU</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
